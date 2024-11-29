@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #8BC34A;
+  --background-color: #F0F4F0;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.auth-container {
+  width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-wrapper {
+  width: 100%;
+}
+
+.switch-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.switch-form a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#crop-recommendations, 
+#disease-diagnosis, 
+#market, 
+#learning {
+  background-color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.learning-modules .module {
+  width: 45%;
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.learning-page {
+  background-color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.learning-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content .lesson-section {
+  margin-bottom: 2rem;
+}
+
+.page-content h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-content h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.page-content ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.back-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Management Support System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AMSS - Agricultural Management Support System</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#crop-recommendations">Crop Recommendations</a></li>
+                <li><a href="#disease-diagnosis">Disease Diagnosis</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#learning">Agricultural Learning</a></li>
+                <li><a href="#login">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Agricultural Management Support System</h1>
+            <p>Your comprehensive agricultural support platform</p>
+        </section>
+
+        <section id="login" class="login-section">
+            <div class="auth-container">
+                <div id="loginContainer" class="form-wrapper">
+                    <h2>Farmer Login</h2>
+                    <form id="loginForm">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                        <p class="switch-form">New User? <a href="#" id="showRegister">Register Here</a></p>
+                    </form>
+                </div>
+                
+                <div id="registerContainer" class="form-wrapper" style="display:none;">
+                    <h2>Farmer Registration</h2>
+                    <form id="registerForm">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <input type="text" placeholder="Farm Location" required>
+                        <input type="number" placeholder="Farm Size (Acres)" required>
+                        <button type="submit">Register</button>
+                        <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login Here</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="crop-recommendations">
+            <h2>Crop Recommendation System</h2>
+            <form id="cropRecommendationForm">
+                <select name="soil-ph" required>
+                    <option value="">Select Soil pH</option>
+                    <option value="acidic">Acidic (< 6.5)</option>
+                    <option value="neutral">Neutral (6.5 - 7.5)</option>
+                    <option value="alkaline">Alkaline (> 7.5)</option>
+                </select>
+                <select name="climate" required>
+                    <option value="">Select Climate</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="subtropical">Subtropical</option>
+                    <option value="temperate">Temperate</option>
+                </select>
+                <select name="soil-type" required>
+                    <option value="">Select Soil Type</option>
+                    <option value="clay">Clay</option>
+                    <option value="sandy">Sandy</option>
+                    <option value="loamy">Loamy</option>
+                </select>
+                <button type="submit">Get Recommendations</button>
+            </form>
+            <div id="cropResults"></div>
+        </section>
+
+        <section id="disease-diagnosis">
+            <h2>Crop Disease Diagnosis</h2>
+            <form id="diseaseDiagnosisForm">
+                <h3>Select Symptoms</h3>
+                <div class="symptom-checklist">
+                    <label>
+                        <input type="checkbox" name="symptom" value="yellowing">
+                        Leaf Yellowing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="symptom" value="spots">
+                        Leaf Spots
+                    </label>
+                    <label>
+                        <input type="checkbox" name="symptom" value="wilting">
+                        Plant Wilting
+                    </label>
+                </div>
+                <button type="submit">Diagnose Disease</button>
+            </form>
+            <div id="diseaseResult"></div>
+        </section>
+
+        <section id="market">
+            <h2>Produce Marketplace</h2>
+            <div class="market-listings">
+                <!-- Dynamic market listings will be populated here -->
+            </div>
+            <button id="listProduceBtn">List My Produce</button>
+        </section>
+
+        <section id="learning">
+            <h2>Agricultural Learning Center</h2>
+            <div class="learning-modules">
+                <div class="module">
+                    <h3>Pesticide Application</h3>
+                    <p>Learn best practices for crop protection</p>
+                    <a href="#" class="learn-more-btn" id="pesticide-learn">Learn More</a>
+                </div>
+                <div class="module">
+                    <h3>Fertilizer Usage</h3>
+                    <p>Optimize nutrient management</p>
+                    <a href="#" class="learn-more-btn" id="fertilizer-learn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Pages -->
+        <section id="learning-page" class="learning-page" style="display:none;">
+            <div class="learning-content">
+                <button id="back-to-learning-center" class="back-btn">← Back to Learning Center</button>
+                <div id="pesticide-content" class="page-content" style="display:none;">
+                    <h2>Pesticide Application Fundamentals</h2>
+                    <div class="lesson-section">
+                        <h3>1. Understanding Pesticides</h3>
+                        <p>Pesticides are chemical substances used to prevent, destroy, or control pests that can damage crops. These include:</p>
+                        <ul>
+                            <li>Insecticides (control insects)</li>
+                            <li>Herbicides (control weeds)</li>
+                            <li>Fungicides (control fungal diseases)</li>
+                        </ul>
+                    </div>
+                    <div class="lesson-section">
+                        <h3>2. Safe Application Practices</h3>
+                        <p>Key guidelines for pesticide application:</p>
+                        <ul>
+                            <li>Always wear protective gear (gloves, mask, goggles)</li>
+                            <li>Read and follow label instructions carefully</li>
+                            <li>Calibrate equipment before application</li>
+                            <li>Avoid applying during windy or rainy conditions</li>
+                        </ul>
+                    </div>
+                    <div class="lesson-section">
+                        <h3>3. Environmental Considerations</h3>
+                        <p>Minimize environmental impact by:</p>
+                        <ul>
+                            <li>Using targeted application methods</li>
+                            <li>Avoiding over-application</li>
+                            <li>Protecting water sources</li>
+                            <li>Considering organic alternatives</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="fertilizer-content" class="page-content" style="display:none;">
+                    <h2>Fertilizer Usage and Management</h2>
+                    <div class="lesson-section">
+                        <h3>1. Understanding Fertilizers</h3>
+                        <p>Fertilizers provide essential nutrients for plant growth:</p>
+                        <ul>
+                            <li>Nitrogen (N): Leaf and stem growth</li>
+                            <li>Phosphorus (P): Root and flower development</li>
+                            <li>Potassium (K): Overall plant health</li>
+                        </ul>
+                    </div>
+                    <div class="lesson-section">
+                        <h3>2. Application Techniques</h3>
+                        <p>Best practices for fertilizer application:</p>
+                        <ul>
+                            <li>Conduct soil tests before application</li>
+                            <li>Apply at the right time of crop growth</li>
+                            <li>Use appropriate application methods</li>
+                            <li>Avoid over-fertilization</li>
+                        </ul>
+                    </div>
+                    <div class="lesson-section">
+                        <h3>3. Types of Fertilizers</h3>
+                        <p>Common fertilizer types:</p>
+                        <ul>
+                            <li>Organic fertilizers (compost, manure)</li>
+                            <li>Synthetic chemical fertilizers</li>
+                            <li>Slow-release fertilizers</li>
+                            <li>Liquid vs. granular fertilizers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Agricultural Management Support System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
